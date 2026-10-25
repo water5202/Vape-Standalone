@@ -11,8 +11,15 @@ local textChatService = cloneref(game:GetService("TextChatService"))
 local replicatedStorage = cloneref(game:GetService("ReplicatedStorage"))
 local httpService = cloneref(game:GetService("HttpService"))
 
-local function fetch(url: string): "quicker fetch"
-    return loadstring(game:HttpGet(url))()
+local function fetch(url: string): "fetch(url)->module"
+    local content = nil
+    local suc, res = pcall(function()
+        content = loadstring(game:HttpGet(url))()
+    end)
+    if not suc then
+        error("[vapetweaker]: "..res)
+    end
+    return content
 end
 
 vapeComponents = {
@@ -581,6 +588,5 @@ vapeComponents.vape:Clean(function()
 end)
 
 vapeComponents.entitylib.start()
-
 vapeComponents.notif("Vape", "VapeTweaker loaded!", 5, "info")
 return vapeComponents
