@@ -71,19 +71,6 @@ function vapeComponents.notif(Title: string, Description: string, Time: number, 
     end
 end
 
-function vapeComponents.addBlur(parent)
-	local blur = Instance.new('ImageLabel')
-	blur.Name = 'Blur'
-	blur.Size = UDim2.new(1, 89, 1, 52)
-	blur.Position = UDim2.fromOffset(-48, -31)
-	blur.BackgroundTransparency = 1
-	blur.Image = vapeComponents.getvapeasset('newvape/assets/new/blur.png')
-	blur.ScaleType = Enum.ScaleType.Slice
-	blur.SliceCenter = Rect.new(52, 31, 261, 502)
-	blur.Parent = parent
-	return blur
-end
-
 function vapeComponents.calculateMoveVector(vec)
 	local c, s
 	local _, _, _, R00, R01, R02, _, _, R12, _, _, R22 = vapeComponents.gameCamera.CFrame:GetComponents()
