@@ -1,5 +1,5 @@
 # vapetweaker
-A wrapper for VapeV4ForRoblox by 7GrandDad to make it easier to make your own custom modules.<br>
+A wrapper for VapeV4ForRoblox by 7GrandDad to make your own custom modules.<br>
 ```lua
 local vapetweaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/water5202/vapetweaker/refs/heads/main/src/wrapper.lua"))()
 ```
