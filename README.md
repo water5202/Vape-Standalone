@@ -6,5 +6,5 @@ local vapetweaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/w
 It preloads most libraries that vape uses (vapetweaker.getvapeasset, you get the picture).<br>
 Use it like any other, for example<br>
 ```lua
-vape.Categories.Blatant:CreateModule("Ragebot", Function = function() end, Tooltip = "Detects and shoots any enemies if it seen by raycast")
+vape.Categories.Blatant:CreateModule({Name = "Ragebot", Function = function() end, Tooltip = "Detects and shoots any enemies if it seen by raycast"})
 ```
