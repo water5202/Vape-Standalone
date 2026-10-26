@@ -8,3 +8,27 @@ Use it like any other, for example<br>
 ```lua
 vape.Categories.Blatant:CreateModule({Name = "Ragebot", Function = function() end, Tooltip = "Detects and shoots any enemies if it seen by raycast"})
 ```
+Heres a functional example
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+local vapetweaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/water5202/vapetweaker/refs/heads/main/src/wrapper.lua"))()
+
+local entitylib = vapetweaker.entitylib
+local inputService = cloneref(game:GetService("UserInputService"))
+local InfiniteJump
+
+InfiniteJump = vapetweaker.vape.Categories.Blatant:CreateModule({
+    Name = "InfiniteJump", 
+    Function = function(value)
+        if value then 
+            InfiniteJump:Clean(inputService.JumpRequest:Connect(function() 
+                if entitylib.isAlive then 
+                    local hum = entitylib.character.Humanoid 
+                    hum:ChangeState(Enum.HumanoidStateType.Jumping) 
+                end 
+            end))
+        end 
+    end, 
+    Tooltip = "Lets you jump in the air."
+})
+```
