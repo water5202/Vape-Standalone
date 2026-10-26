@@ -71,21 +71,19 @@ function vapeComponents.notif(Title: string, Description: string, Time: number, 
     end
 end
 
-function vapeComponents.calculateMoveVector(vec)
-	local c, s
-	local _, _, _, R00, R01, R02, _, _, R12, _, _, R22 = vapeComponents.gameCamera.CFrame:GetComponents()
-	if R12 < 1 and R12 > -1 then
-		c = R22
-		s = R02
-	else
-		c = R00
-		s = -R01 * math.sign(R12)
+function vapeComponents.RemoveModule(name: string)
+	for _, Module in vapeComponents.vape.Modules do
+		if Module.Name == name then
+			if Module.Enabled then
+				Module:Toggle()
+			end
+			Module.Object:Destroy()
+			break
+		end
 	end
-	vec = Vector3.new((c * vec.X + s * vec.Z), 0, (c * vec.Z - s * vec.X)) / math.sqrt(c * c + s * s)
-	return vec.Unit == vec.Unit and vec.Unit or Vector3.zero
 end
 
-function removeTags(str)
+local function removeTags(str)
 	str = str:gsub('<br%s*/>', '\n')
 	return (str:gsub('<[^<>]->', ''))
 end
