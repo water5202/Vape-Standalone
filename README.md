@@ -33,7 +33,6 @@ InfiniteJump = vapetweaker.vape.Categories.Blatant:CreateModule({
 ```
 # Features
 Module deletion is another thing vapetweaker can accomplish<br>
-```
+```lua
 vapetweaker.DeleteModule("SomeModule")
 ```
-Does exactly what you think it does.
