@@ -2,10 +2,6 @@ if not shared.vape then return end
 
 local vapeComponents
 
-if not shared.vapetweaker then
-shared.vapetweaker = false
-end
-
 local cloneref = cloneref or function(obj)
     return obj
 end
@@ -576,10 +572,6 @@ vapeComponents.vape:Clean(function()
 	table.clear(vapeComponents.whitelist)
 end)
 
-vapeComponents.entitylib.start
-
-if not vapetweaker then
+vapeComponents.entitylib.start()
 vapeComponents.notif("Vape", "VapeTweaker Loaded!", 5, "info")
-vapetweaker = true
-end
 return vapeComponents
