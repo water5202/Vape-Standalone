@@ -31,3 +31,7 @@ InfiniteJump = vapetweaker.vape.Categories.Blatant:CreateModule({
     Tooltip = "Lets you jump in midair."
 })
 ```
+# Updatelog
+```
+[+] Added the ability to delete modules (vapetweaker.DeleteModule("MyModule"))
+```
