@@ -575,5 +575,5 @@ vapeComponents.vape:Clean(function()
 end)
 
 vapeComponents.entitylib.start()
-vapeComponents.notif("Vape", "VapeTweaker loaded!", 5, "info")
+vapeComponents.notif("Vape", "VapeTweaker Loaded!", 5, "info")
 return vapeComponents
