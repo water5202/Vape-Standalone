@@ -28,3 +28,5 @@ InfiniteJump = vapetweaker.vape.Categories.Blatant:CreateModule({
     Tooltip = "Lets you jump in the air."
 })
 ```
+<img width="267" height="130" alt="image" src="https://github.com/user-attachments/assets/feebc09f-98f5-4825-b864-95c7e633e976" />
+
