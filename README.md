@@ -28,6 +28,6 @@ InfiniteJump = vapetweaker.vape.Categories.Blatant:CreateModule({
             end))
         end 
     end, 
-    Tooltip = "Lets you jump in the air."
+    Tooltip = "Lets you jump in midair."
 })
 ```
